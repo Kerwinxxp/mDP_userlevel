@@ -1,0 +1,40 @@
+{
+    "output_folder_path": "outputs/WikiActors/multi_8_noiseonly/",
+    "data_file_path": "data/multi_8.json",
+    "individual_name_column": "Name",
+    "background_knowledge_column": "Background knowledge",
+    "load_saved_pretreatment": true,
+    "add_non_saved_anonymizations": true,
+
+
+    "anonymize_background_knowledge": false,
+    "only_use_anonymized_background_knowledge": false,
+
+    "use_mask_background_knowledge": false,
+    "only_use_mask_background_knowledge": false,
+
+
+    "use_noisy_background_knowledge": true,
+    "only_use_noisy_background_knowledge": true,
+
+
+    "use_document_curation": true,
+    "save_pretreatment": true,
+    "load_saved_finetuning": true,
+    "base_model_name": "distilbert-base-uncased",
+    "tokenization_block_size":250,
+    "use_additional_pretraining": true,
+    "save_additional_pretraining": true,
+    "load_saved_pretraining": true,
+    "pretraining_epochs": 3,
+    "pretraining_batch_size": 4,
+    "pretraining_learning_rate": 5e-05,
+    "pretraining_mlm_probability": 0.15,
+    "pretraining_sliding_window": "512-128",
+    "finetuning_epochs": 10,
+    "finetuning_batch_size": 8,
+    "finetuning_learning_rate": 5e-05,
+    "finetuning_sliding_window": "100-25",
+    "dev_set_column_name": false,
+    "save_finetuning": true
+}
