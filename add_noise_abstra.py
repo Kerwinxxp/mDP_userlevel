@@ -138,6 +138,8 @@ class DistanceStatistics:
         self.all_distances.extend(candidate_distances.tolist())
         self.selected_distances.append(float(candidate_distances[selected_idx]))
         self.min_distances.append(float(np.min(candidate_distances)))
+        if not hasattr(self, "max_distances"):
+            self.max_distances = []
         self.max_distances.append(float(np.max(candidate_distances)))
         self.mean_distances.append(float(np.mean(candidate_distances)))
         self.distances_by_epsilon[epsilon].append(float(candidate_distances[selected_idx]))
